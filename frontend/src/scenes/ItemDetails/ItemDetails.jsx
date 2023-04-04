@@ -25,9 +25,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      import.meta.env(
-        VITE_BACKEND_URL_ROOT
-      )`/api/items/${itemId}?populate=image` ||
+      `https://webshop-production-4b16.up.railway.app/api/items/${itemId}?populate=image` ||
         `http://localhost:1338/api/items/${itemId}?populate=image`,
       {
         method: "GET",
@@ -39,7 +37,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      import.meta.env(VITE_BACKEND_URL_ROOT)`/api/items?populate=image` ||
+      `https://webshop-production-4b16.up.railway.app/api/items?populate=image` ||
         `http://localhost:1338/api/items?populate=image`,
       {
         method: "GET",
@@ -64,9 +62,7 @@ const ItemDetails = () => {
             width="100%"
             height="100%"
             src={
-              import.meta.env(
-                VITE_BACKEND_URL_ROOT
-              )`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}` ||
+              `https://webshop-production-4b16.up.railway.app${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}` ||
               `http://localhost:1338${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`
             }
             style={{ objectFit: "contain" }}

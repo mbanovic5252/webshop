@@ -76,9 +76,7 @@ const CartMenu = () => {
                       width="123px"
                       height="164px"
                       src={
-                        import.meta.env(
-                          VITE_BACKEND_URL_ROOT
-                        )`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}` ||
+                        `https://webshop-production-4b16.up.railway.app${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}` ||
                         `http://localhost:1338${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`
                       }
                     />

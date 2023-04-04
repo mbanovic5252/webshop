@@ -39,7 +39,7 @@ const Item = ({ item, width }) => {
           width="300px"
           height="400px"
           src={
-            import.meta.env(VITE_BACKEND_URL_ROOT)`${url}` ||
+            `https://webshop-production-4b16.up.railway.app${url}` ||
             `http://localhost:1338${url}`
           }
           onClick={() => navigate(`/item/${item.id}`)}

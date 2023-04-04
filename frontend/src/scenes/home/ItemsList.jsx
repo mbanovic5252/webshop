@@ -17,7 +17,7 @@ const ItemsList = () => {
 
   async function getItems() {
     const items = await fetch(
-      import.meta.env(VITE_BACKEND_URL_ROOT)`${"/api/items?populate=image"}` ||
+      `https://webshop-production-4b16.up.railway.app/api/items?populate=image` ||
         "http://localhost:1338/api/items?populate=image",
       { method: "GET" }
     );

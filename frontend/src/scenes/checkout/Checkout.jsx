@@ -48,7 +48,7 @@ const Checkout = () => {
     };
 
     const response = await fetch(
-      import.meta.env(VITE_BACKEND_URL_ROOT)`${"/api/orders"}` ||
+      `https://webshop-production-4b16.up.railway.app/api/orders` ||
         "http://localhost:1338/api/orders",
       {
         method: "POST",
