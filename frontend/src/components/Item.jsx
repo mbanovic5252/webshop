@@ -38,7 +38,10 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={`http://localhost:1338${url}`}
+          src={
+            import.meta.env(VITE_BACKEND_URL_ROOT)`${url}` ||
+            `http://localhost:1338${url}`
+          }
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />

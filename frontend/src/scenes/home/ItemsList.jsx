@@ -17,7 +17,8 @@ const ItemsList = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1338/api/items?populate=image",
+      import.meta.env(VITE_BACKEND_URL_ROOT)`${"/api/items?populate=image"}` ||
+        "http://localhost:1338/api/items?populate=image",
       { method: "GET" }
     );
     const itemsJson = await items.json();

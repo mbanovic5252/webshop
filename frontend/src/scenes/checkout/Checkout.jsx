@@ -47,11 +47,15 @@ const Checkout = () => {
       })),
     };
 
-    const response = await fetch("http://localhost:1338/api/orders", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
-    });
+    const response = await fetch(
+      import.meta.env(VITE_BACKEND_URL_ROOT)`${"/api/orders"}` ||
+        "http://localhost:1338/api/orders",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      }
+    );
     const session = await response.json();
     await stripe.redirectToCheckout({
       sessionId: session.id,
