@@ -48,8 +48,7 @@ const Checkout = () => {
     };
 
     const response = await fetch(
-      `https://webshop-production-4b16.up.railway.app/api/orders` ||
-        "http://localhost:1338/api/orders",
+      `https://webshop-production-4b16.up.railway.app/api/orders`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

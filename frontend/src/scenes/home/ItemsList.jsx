@@ -17,8 +17,7 @@ const ItemsList = () => {
 
   async function getItems() {
     const items = await fetch(
-      `https://webshop-production-4b16.up.railway.app/api/items?populate=image` ||
-        "http://localhost:1338/api/items?populate=image",
+      `https://webshop-production-4b16.up.railway.app/api/items?populate=image`,
       { method: "GET" }
     );
     const itemsJson = await items.json();
