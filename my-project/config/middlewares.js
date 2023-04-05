@@ -26,17 +26,16 @@ module.exports = [
       },
     },
   },
-
+  //
+  // "https://webshop-one-umber.vercel.app/",
+  // "https://webshop-production-4b16.up.railway.app",
+  // "containers-us-west-139.railway.app",
   {
     name: "strapi::cors",
     config: {
-      origin: [
-        "https://webshop-one-umber.vercel.app/",
-        "https://webshop-production-4b16.up.railway.app",
-        "containers-us-west-139.railway.app",
-      ],
+      origin: ["*"],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-      headers: "*",
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       keepHeaderOnError: true,
     },
   },
