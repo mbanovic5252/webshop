@@ -75,9 +75,7 @@ const CartMenu = () => {
                       alt={item?.name}
                       width="123px"
                       height="164px"
-                      src={import.meta.env(
-                        PUBLIC_URL
-                      )`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                      src={`https://webshop-production-4b16.up.railway.app${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                     />
                   </Box>
                   <Box flex="1 1 60%">

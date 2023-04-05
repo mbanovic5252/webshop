@@ -17,7 +17,7 @@ const ItemsList = () => {
 
   async function getItems() {
     const items = await fetch(
-      import.meta.env(PUBLIC_URL)`/api/items?populate=image`,
+      `https://webshop-production-4b16.up.railway.app/api/items?populate=image`,
       { method: "GET" }
     );
     const itemsJson = await items.json();

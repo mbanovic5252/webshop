@@ -25,7 +25,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      import.meta.env(PUBLIC_URL)`/api/items/${itemId}?populate=image`,
+      `https://webshop-production-4b16.up.railway.app/api/items/${itemId}?populate=image`,
       {
         method: "GET",
       }
@@ -36,7 +36,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      import.meta.env(PUBLIC_URL)`/api/items?populate=image`,
+      `https://webshop-production-4b16.up.railway.app/api/items?populate=image`,
       {
         method: "GET",
       }
@@ -59,9 +59,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={import.meta.env(
-              PUBLIC_URL
-            )`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`https://webshop-production-4b16.up.railway.app${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>

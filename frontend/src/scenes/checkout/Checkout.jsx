@@ -47,11 +47,14 @@ const Checkout = () => {
       })),
     };
 
-    const response = await fetch(import.meta.env(PUBLIC_URL)`/api/orders`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
-    });
+    const response = await fetch(
+      `https://webshop-production-4b16.up.railway.app/api/orders`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      }
+    );
     const session = await response.json();
     await stripe.redirectToCheckout({
       sessionId: session.id,

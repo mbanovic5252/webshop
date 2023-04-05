@@ -38,7 +38,7 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={import.meta.env(PUBLIC_URL)`${url}`}
+          src={`https://webshop-production-4b16.up.railway.app${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
