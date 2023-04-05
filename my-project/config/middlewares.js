@@ -26,6 +26,7 @@ module.exports = [
       },
     },
   },
+  "strapi::poweredBy",
   {
     name: "strapi::cors",
     config: {
@@ -35,7 +36,7 @@ module.exports = [
       keepHeaderOnError: true,
     },
   },
-  "strapi::poweredBy",
+
   "strapi::logger",
   "strapi::query",
   "strapi::body",
