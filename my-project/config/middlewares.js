@@ -30,16 +30,23 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      origin: [
-        "https://webshop-one-umber.vercel.app/",
-        "https://webshop-production-4b16.up.railway.app",
-        "containers-us-west-139.railway.app",
-      ],
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-      keepHeaderOnError: true,
+      enabled: false,
+      header: "*",
     },
   },
+  // {
+  //   name: "strapi::cors",
+  //   config: {
+  //     origin: [
+  //       "https://webshop-one-umber.vercel.app/",
+  //       "https://webshop-production-4b16.up.railway.app",
+  //       "containers-us-west-139.railway.app",
+  //     ],
+  //     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+  //     headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+  //     keepHeaderOnError: true,
+  //   },
+  // },
 
   "strapi::logger",
   "strapi::query",
