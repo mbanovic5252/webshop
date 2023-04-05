@@ -36,8 +36,7 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      enabled: false,
-      origin: [],
+      keepHeaderOnError: true,
     },
   },
   "strapi::poweredBy",
