@@ -35,8 +35,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         payment_method_types: ["card"],
         customer_email: email,
         mode: "payment",
-        success_url: "/checkout/success",
-        cancel_url: "/",
+        success_url: "https://webshop-one-umber.vercel.app//checkout/success",
+        cancel_url: "https://webshop-one-umber.vercel.app/",
         line_items: lineItems,
       });
 
