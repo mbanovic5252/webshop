@@ -27,21 +27,7 @@ module.exports = [
     },
   },
   "strapi::poweredBy",
-  {
-    name: "strapi::cors",
-    config: {
-      origin: [
-        "https://webshop-one-umber.vercel.app/",
-        "https://webshop-git-main-mbanovic5252.vercel.app/",
-        "https://webshop-mbanovic5252.vercel.app/",
-        "https://webshop-production-4b16.up.railway.app",
-      ],
-      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
-      keepHeaderOnError: true,
-    },
-  },
-
+  "strapi::cors",
   "strapi::logger",
   "strapi::query",
   "strapi::body",
